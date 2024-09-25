@@ -1,0 +1,13 @@
+name: DB deployment
+
+on:
+    push:
+        branches: [ main ]
+    workflow_dispatch:
+    
+jobs:
+    deploy:
+        runs-on: self-hosted
+        steps:
+            - name: Clone the repository to the server
+              uses: actions/checkout@v4
